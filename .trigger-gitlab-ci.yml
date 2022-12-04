@@ -1,0 +1,11 @@
+stages:
+  - build
+  - test
+  - deploy
+
+include:
+  - local: applications/.gitlab-ci.yml
+  - local: .gitlab/ci/.feature-gitlab-ci.yml
+  - local: .gitlab/ci/.develop-gitlab-ci.yml
+  - local: .gitlab/ci/.stage-gitlab-ci.yml
+  - local: .gitlab/ci/.prod-gitlab-ci.yml

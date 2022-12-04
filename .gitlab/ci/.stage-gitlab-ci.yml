@@ -1,0 +1,20 @@
+build-stage:
+  extends: .staging-rules
+  stage: build
+  script:
+    - echo 'build'
+    - echo ${PROJECT_NAME}
+
+test-stage:
+  extends: .staging-rules
+  stage: test
+  script:
+    - echo 'test'
+    - echo ${PROJECT_NAME}
+
+deploy-stage:
+  extends: .staging-rules
+  stage: deploy
+  script:
+    - echo 'deploy'
+    - echo ${PROJECT_NAME}

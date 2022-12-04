@@ -1,0 +1,20 @@
+build-feature:
+  extends: .feature-rules
+  stage: build
+  script:
+    - echo 'build'
+    - echo ${PROJECT_NAME}
+
+test-feature:
+  extends: .feature-rules
+  stage: test
+  script:
+    - echo 'test'
+    - echo ${PROJECT_NAME}
+
+deploy-feature:
+  extends: .feature-rules
+  stage: deploy
+  script:
+    - echo 'deploy'
+    - echo ${PROJECT_NAME}

@@ -1,0 +1,27 @@
+.feature-rules:
+  rules:
+    - !reference [.a-api-feature, rules]
+    - !reference [.b-api-feature, rules]
+    - when: never
+
+.develop-rules:
+  rules:
+    - !reference [.a-api-develop, rules]
+    - !reference [.b-api-develop, rules]
+    - when: never
+
+.staging-rules:
+  rules:
+    - !reference [.a-api-staging, rules]
+    - !reference [.b-api-staging, rules]
+    - when: never
+
+.prod-rules:
+  rules:
+    - !reference [.a-api-prod, rules]
+    - !reference [.b-api-prod, rules]
+    - when: never
+
+include:
+  - local: applications/a/.gitlab-ci.yml
+  - local: applications/b/.gitlab-ci.yml

@@ -1,0 +1,20 @@
+build-develop:
+  extends: .develop-rules
+  stage: build
+  script:
+    - echo 'build'
+    - echo ${PROJECT_NAME}
+
+test-develop:
+  extends: .develop-rules
+  stage: test
+  script:
+    - echo 'test'
+    - echo ${PROJECT_NAME}
+
+deploy-develop:
+  extends: .develop-rules
+  stage: deploy
+  script:
+    - echo 'deploy'
+    - echo ${PROJECT_NAME}

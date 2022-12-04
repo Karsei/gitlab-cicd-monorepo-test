@@ -1,0 +1,20 @@
+build-prod:
+  extends: .prod-rules
+  stage: build
+  script:
+    - echo 'build'
+    - echo ${PROJECT_NAME}
+
+test-prod:
+  extends: .prod-rules
+  stage: test
+  script:
+    - echo 'test'
+    - echo ${PROJECT_NAME}
+
+deploy-prod:
+  extends: .prod-rules
+  stage: deploy
+  script:
+    - echo 'deploy'
+    - echo ${PROJECT_NAME}
