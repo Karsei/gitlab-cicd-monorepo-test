@@ -1,0 +1,3 @@
+.b-api-common-variable:
+  variables:
+    PROJECT_NAME: b-api

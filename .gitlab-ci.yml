@@ -3,23 +3,17 @@ stages:
 
 trigger-a-job:
   stage: trigger
-  rules:
-    - !reference [.a-api-feature, rules]
-    - !reference [.a-api-develop, rules]
-    - !reference [.a-api-staging, rules]
-    - !reference [.a-api-prod, rules]
   variables: !reference [.a-api-common-variable, variables]
+  rules:
+    - !reference [.env-rules, rules]
   trigger:
     include: .trigger-gitlab-ci.yml
 
 trigger-b-job:
   stage: trigger
-  rules:
-    - !reference [.b-api-feature, rules]
-    - !reference [.b-api-develop, rules]
-    - !reference [.b-api-staging, rules]
-    - !reference [.b-api-prod, rules]
   variables: !reference [.b-api-common-variable, variables]
+  rules:
+    - !reference [.env-rules, rules]
   trigger:
     include: .trigger-gitlab-ci.yml
 
